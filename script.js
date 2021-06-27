@@ -1,7 +1,7 @@
 var runner = document.getElementById("runner");
 var obstacle = document.getElementById("obstacle");
 let counter = 0;
-var score = document.getElementById("score")
+var score = document.getElementById("score");
 
 console.log(counter++);
 
@@ -13,12 +13,14 @@ function jump() {
     setTimeout(function() {
         runner.classList.remove("animate");
         counter++;
-        console.log(counter);
-
-        // score.innerHTML(counter)
     }, 500);
 };
 
+function returnScore() {
+    if(counter >= 0) {
+        return counter++
+    }
+}
 
 var lose = setInterval(function() {
     var runnerTop= parseInt(window.getComputedStyle(runner).getPropertyValue("top"));
@@ -27,7 +29,6 @@ var lose = setInterval(function() {
         obstacle.style.animation = "none";
         obstacle.style.display="none";
         alert("Score: "+ counter);
-        console.log(counter);
         counter = 0;
     };
 }, 10);
