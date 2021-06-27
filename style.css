@@ -1,10 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    display: flex;
-    justify-content: space-around;
-    
+    background-color: black;    
 }
 
 #game {
@@ -15,38 +12,53 @@ body {
     top: 50px;
     margin: 0 auto;
     margin-top: 20vh;
-    overflow: hidden;
-}
+    z-index: 10;
+    /* overflow: hiddenzzzz; */
+ }
 
 #runner {
-    height: 60px;
+    height: 120px;
     width: 60px;
-    background-color: navajowhite;
+    /* background-color: navajowhite; */
     position: relative;
-    top: 190px;
+    top: 150px;
     left: 100px;
+    z-index: 1;
+}
+
+#runner img {
+    max-height: 120px;
+    width: auto;
+
 }
 
 .animate {
-    animation: jump .5s linear;
+    animation: jump .5s linear 0s;
 }
 
 @keyframes jump{
     0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
+    30%{top: 80px;}
+    70%{top: 80px;}
     100%{top: 150px;}
 }
 
 #obstacle  {
     position: relative;
-    height: 50px;
-    width: 50px;
-    background-color: red;
+    height: 40px;
+    width: 80px;
     left: 100%;
     animation: block 1.3s infinite linear;
-    top: 150px;
+    top: 100px;
     left: 100%;
+    z-index: 10;
+}
+
+#obstacle img {
+    height: 40px;
+    width: auto;
+    top: 10px;
+    position: absolute;
 }
 
 @keyframes block {
@@ -60,4 +72,5 @@ body {
     height: 50px;
     top: 440px;
     background-color: pink;
+    z-index: 1;
 }
