@@ -28,7 +28,7 @@ body {
     width: 60px;
     /* background-color: navajowhite; */
     position: relative;
-    top: 150px;
+    top: 120px;
     left: 100px;
     z-index: 1;
 }
@@ -44,10 +44,10 @@ body {
 }
 
 @keyframes jump{
-    0%{top: 150px;}
+    0%{top: 120px;}
     30%{top: 80px;}
     70%{top: 80px;}
-    100%{top: 150px;}
+    100%{top: 120px;}
 }
 
 #obstacle  {
@@ -56,7 +56,7 @@ body {
     width: 80px;
     left: 100%;
     animation: block 1.3s infinite linear;
-    top: 100px;
+    top: 80px;
     left: 100%;
     z-index: 10;
 }
