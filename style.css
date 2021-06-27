@@ -1,3 +1,31 @@
-h1 {
-    color: red;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#game {
+    position: absolute;
+    width: 700px;
+    height: 250px;
+    background-color: darkblue;
+    top: 50px;
+    margin: 0 auto;
+    margin-top: 20vh;
+}
+
+#runner {
+    height: 60px;
+    width: 60px;
+    background-color: navajowhite;
+    position: relative;
+    top: 190px;
+    left: 100px;
+}
+
+.animate {
+    animation: jump .5 linear;
 }
