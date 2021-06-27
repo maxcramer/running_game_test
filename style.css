@@ -29,3 +29,34 @@ body {
 .animate {
     animation: jump .5 linear;
 }
+
+@keyframes jump{
+    0%{top: 150px};
+    30%{top: 100px};
+    70%{top: 100px};
+    100%{top: 150px};
+}
+
+#obstacle  {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    left: 100%;
+    animation: block 1.3s infinite linear;
+    top: 150px;
+    left: 100%;
+}
+
+@keyframes block {
+    0%{left: 680px};
+    100%{left: -680px};
+}
+
+#ground {
+    width: 700px;
+    position: absolute;
+    height: 50px;
+    top: 440px;
+    background-color: pink;
+}
