@@ -1,7 +1,7 @@
 var runner = document.getElementById("runner");
 var obstacle = document.getElementById("obstacle");
 let counter = 0;
-var score = document.getElementById("score");
+var score = document.getElementById("score").innerHTML = counter;
 
 console.log(counter++);
 
@@ -18,7 +18,7 @@ function jump() {
 
 function returnScore() {
     if(counter >= 0) {
-        return counter++
+        return counter++;
     }
 }
 
@@ -29,7 +29,7 @@ var lose = setInterval(function() {
         obstacle.style.animation = "none";
         obstacle.style.display="none";
         alert("Score: "+ counter);
-        counter = 0;
+        console.log(counter);
     };
 }, 10);
 
